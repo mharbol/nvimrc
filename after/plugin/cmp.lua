@@ -23,7 +23,9 @@ cmp.setup({
         ['<C-Space>'] = cmp.mapping.complete(),
         ['<C-e>'] = cmp.mapping.abort(),
         ['<S-CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
-        ['<C-p>'] = cmp.mapping.confirm({ select = true }), -- here so I can overwrite this mapping on Windows Terminal
+        ['<C-p>'] = cmp.mapping.confirm({ select = true }),  -- here so I can overwrite this mapping on Windows Terminal 
+                                                             -- use the following to map <S-CR> to <C-p> in winterm (this way you can use the shift+enter in all terminals) 
+                                                             --{ "command": { "action": "sendInput", "input": "\u0010" }, "keys": "shift+enter" }
 
 
     }),

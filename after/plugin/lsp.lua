@@ -133,15 +133,6 @@ lsp.clangd.setup({
 lsp.astro.setup{
     capabilities = capabilities,
     on_attach = on_attach,
-    -- cmd = { "astro-ls", "--stdio" },
-    -- filetypes = { "astro" },
-    -- init_options = {
-    --     configuration = {},
-    --     typescript = {
-    --         serverPath = ""
-    --     }
-    -- },
-    -- root_dir = util.root_pattern("package.json", "tsconfig.json", "jsconfig.json", ".git"),
 }
 
 lsp.tsserver.setup{
