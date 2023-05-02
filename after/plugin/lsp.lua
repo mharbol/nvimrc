@@ -19,6 +19,7 @@ require('mason-lspconfig').setup({
         'lua_ls',
         'jdtls',
         'gradle_ls',
+        'rust_analyzer',
     },
 })
 local lsp = require('lspconfig')
@@ -166,6 +167,11 @@ lsp.gradle_ls.setup({
 })
 
 lsp.dartls.setup({
+    capabilities = capabilities,
+    on_attach = on_attach,
+})
+
+lsp.rust_analyzer.setup({
     capabilities = capabilities,
     on_attach = on_attach,
 })
