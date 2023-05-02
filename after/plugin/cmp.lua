@@ -23,6 +23,7 @@ cmp.setup({
         ['<C-Space>'] = cmp.mapping.complete(),
         ['<C-e>'] = cmp.mapping.abort(),
         ['<S-CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
+        ['<C-p>'] = cmp.mapping.confirm({ select = true }), -- here so I can overwrite this mapping on Windows Terminal
 
 
     }),
