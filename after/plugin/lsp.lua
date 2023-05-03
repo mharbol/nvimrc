@@ -20,7 +20,10 @@ require('mason-lspconfig').setup({
         'pylsp',
         'clangd',
         'astro', -- install language server with 'npm install -g @astrojs/language-server'
+
         -- 'typescript-language-server', -- npm install -g typescript typescript-language-server
+        -- ^^^^ for whatever reason Mason really doesn't like that one ^^^^^
+
         'lua_ls',
         'jdtls',
         'gradle_ls',
