@@ -1,12 +1,15 @@
 local ls = require 'luasnip'
-local s = ls.s                                -- shorthand for snippet node
+local s = ls.s -- shorthand for snippet node
 local i = ls.insert_node
+local c = ls.choice_node
+local t = ls.text_node
+local f = ls.function_node
 local fmt = require('luasnip.extras.fmt').fmt -- for combining formatted strings
 local rep = require('luasnip.extras').rep     -- repeat what is in position
 
 -- table that holds common snippets for all languages
 ls.add_snippets("all", {
-
+    s("curtime", f(function() return os.date("%D - %H:%M") end)), -- an example function node
 })
 
 ls.add_snippets("lua", {
@@ -30,4 +33,25 @@ ls.add_snippets("python", {
 
 ls.add_snippets("java", {
     ls.parser.parse_snippet("main", "public static void main(String[] args) {\n\t$0\n}"), -- main method
+    ls.parser.parse_snippet("str", "String ${1:str} = \"$0\";"), -- main method
+})
+
+ls.add_snippets("rust", {
+    s( -- mod test
+        "modtest",
+        fmt(
+            [[
+          #[cfg(test)]
+          mod test {{
+          {}
+
+              {}
+          }}
+        ]],
+            {
+                c(1, { t("    use super::*;"), t("") }),
+                i(0),
+            }
+        )
+    ),
 })

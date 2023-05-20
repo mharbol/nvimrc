@@ -33,7 +33,7 @@ vim.keymap.set({ "i", "s" }, "<C-l>", function ()
     if luasnip.choice_active() then
        luasnip.change_choice(1)
     end
-end, { silent = true })
+end)
 
 -- for re-sourcing the LuaSnip file
 vim.keymap.set('n', '<leader><leader>s', "<cmd>source ~/.config/nvim/after/plugin/my_snips.lua<CR>")
