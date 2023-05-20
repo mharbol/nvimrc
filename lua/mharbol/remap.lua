@@ -20,3 +20,4 @@ vim.keymap.set("i", "<C-l>", "<Right>")
 -- I love being centered, so do that when I go
 -- to the bottom
 vim.keymap.set("n", "G", "Gzz")
+

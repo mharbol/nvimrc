@@ -81,6 +81,9 @@ local plugins = {
 
     -- nifty icons
     'nvim-tree/nvim-web-devicons', -- for icons in the filetree
+
+    -- filetree navigation as a nvim buffer
+    'stevearc/oil.nvim',
 }
 
 local opts = {}

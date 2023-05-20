@@ -23,6 +23,7 @@ treesitter.setup {
         'lua',
         'markdown',
         'rust',
+        'toml',
         'typescript',
         'vue',
         'yaml',
