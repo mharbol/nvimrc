@@ -21,3 +21,4 @@ vim.keymap.set("i", "<C-l>", "<Right>")
 -- to the bottom
 vim.keymap.set("n", "G", "Gzz")
 
+vim.keymap.set("n", "<CR>", "ciw") -- enter changes the hovered word in normal
