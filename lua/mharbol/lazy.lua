@@ -15,9 +15,6 @@ vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
 
-    -- Packer can manage itself
-    -- 'wbthomason/packer.nvim',
-
     -- telescope add-on
     {
         'nvim-telescope/telescope.nvim', tag = '0.1.0',
@@ -48,7 +45,10 @@ local plugins = {
     'lewis6991/gitsigns.nvim',
 
     -- shows progress for lsp indexing
-    'j-hui/fidget.nvim',
+    {
+        'j-hui/fidget.nvim',
+        tag = 'legacy',
+    },
 
     -- colorschemes seletion to choose from 
     'rebelot/kanagawa.nvim',
