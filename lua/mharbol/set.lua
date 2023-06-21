@@ -20,3 +20,6 @@ vim.opt.smartcase = true
 
 -- call appearance things
 vim.opt.cursorline = true
+
+-- global statusline
+vim.opt.laststatus = 3
