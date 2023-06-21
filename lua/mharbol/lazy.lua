@@ -24,7 +24,7 @@ local plugins = {
     -- treesitter
     {
         'nvim-treesitter/nvim-treesitter',
-        commit = 'd2b7832' -- here because treesitter works here in case of bad things
+        -- commit = 'd2b7832' -- here because treesitter works here in case of bad things
     },
     -- treesitter playground
     'nvim-treesitter/playground',
