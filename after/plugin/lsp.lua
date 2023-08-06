@@ -20,6 +20,7 @@ require('mason-lspconfig').setup({
         'jdtls',
         'gradle_ls',
         'rust_analyzer',
+        'hls',
     },
 })
 local lsp = require('lspconfig')
@@ -165,4 +166,10 @@ lsp.dartls.setup({
 lsp.rust_analyzer.setup({
     capabilities = capabilities,
     on_attach = on_attach,
+})
+
+lsp.hls.setup({
+    capabilities = capabilities,
+    on_attach = on_attach,
+    -- cmd = {"haskell-language-server-8.10.7", "--lsp"}
 })
