@@ -5,6 +5,11 @@ if not status_ok then
     return
 end
 
+local tele_status_ok, telescope_builtin = pcall(require, 'telescope.builtin')
+if not tele_status_ok then
+    return
+end
+
 local util = require("lspconfig/util")
 
 mason.setup()
@@ -38,6 +43,11 @@ local on_attach = function(client, bufnr)
 	vim.keymap.set('n', 'K',  function() vim.lsp.buf.hover() end, opts)
 	vim.keymap.set('n', '<leader>b', function() vim.lsp.buf.references() end, opts)
 	vim.keymap.set('n', '<leader>vrn', function() vim.lsp.buf.rename() end, opts)
+
+    -- Telescop LSP integration
+    vim.keymap.set('n', 'gu', function() telescope_builtin.lsp_incoming_calls() end, opts)
+    vim.keymap.set('n', 'go', function() telescope_builtin.lsp_outgoing_calls() end, opts)
+    vim.keymap.set('n', 'gr', function() telescope_builtin.lsp_references() end, opts)
 
     -- format
     vim.keymap.set('n', '<leader><leader>f', function() vim.lsp.buf.format() end, opts)
