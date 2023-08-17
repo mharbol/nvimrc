@@ -38,22 +38,3 @@ ls.add_snippets("java", {
     ls.parser.parse_snippet("alist", "List<${1:type}> ${2:name} = new ArrayList<>();"),   -- make an ArrayList
 })
 
-ls.add_snippets("rust", {
-    s( -- mod test
-        "modtest",
-        fmt(
-            [[
-          #[cfg(test)]
-          mod test {{
-          {}
-
-              {}
-          }}
-        ]],
-            {
-                c(1, { t("    use super::*;"), t("") }),
-                i(0),
-            }
-        )
-    ),
-})
