@@ -21,9 +21,6 @@ vim.keymap.set("i", "<C-l>", "<Right>")
 -- to the bottom
 vim.keymap.set("n", "G", "Gzz")
 
--- enter changes the hovered word in normal
-vim.keymap.set("n", "<CR>", "ciw")
-
 -- move between splits with ctrl-[direction]
 vim.keymap.set("n", "<C-Right>", "<C-w>l")
 vim.keymap.set("n", "<C-Left>", "<C-w>h")
