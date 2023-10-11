@@ -22,6 +22,7 @@ ls.add_snippets("lua", {
 ls.add_snippets("python", {
     ls.parser.parse_snippet("dfr", "def ${1:func_name}($2) -> ${3:ret_type}:\n\t${0:pass}"),                       -- function with return type
     ls.parser.parse_snippet("df", "def ${1:func_name}($2):\n\t${0:pass}"),                                         -- define a function
+    ls.parser.parse_snippet("cls", "class ${1:class_name}:\n\t${0:pass}"),                                         -- define a class
     ls.parser.parse_snippet("cdr", "def ${1:method_name}(self$2) -> ${3:return_type}:\n\t${0:pass}"),              -- "class define return"
     ls.parser.parse_snippet("cd", "def ${1:method_name}(self$2):\n\t${0:pass}"),                                   -- "class define"
     ls.parser.parse_snippet("init", "def __init__(self$1) -> None:\n\t${0:pass}"),                                 -- define the init for a class
@@ -37,4 +38,3 @@ ls.add_snippets("java", {
     ls.parser.parse_snippet("str", "String ${1:str} = \"$0\";"),                          -- make a string
     ls.parser.parse_snippet("alist", "List<${1:type}> ${2:name} = new ArrayList<>();"),   -- make an ArrayList
 })
-

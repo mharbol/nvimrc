@@ -1,4 +1,3 @@
-
 -- is_bootstrap bit
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
@@ -17,14 +16,16 @@ local plugins = {
 
     -- telescope add-on
     {
-        'nvim-telescope/telescope.nvim', tag = '0.1.0',
-        dependencies = { {'nvim-lua/plenary.nvim'} }
+        'nvim-telescope/telescope.nvim',
+        tag = '0.1.0',
+        dependencies = { { 'nvim-lua/plenary.nvim' } }
     },
 
     -- treesitter
     {
         'nvim-treesitter/nvim-treesitter',
-        -- commit = '800b2f3' -- here because treesitter works here in case of bad things
+        build = ':TSUpdate',
+        -- commit = '572a15f' -- here for astro
     },
     -- treesitter playground
     'nvim-treesitter/playground',
@@ -50,17 +51,17 @@ local plugins = {
         tag = 'legacy',
     },
 
-    -- colorschemes seletion to choose from 
+    -- colorschemes seletion to choose from
     'rebelot/kanagawa.nvim',
     'folke/tokyonight.nvim',
     'bluz71/vim-nightfly-colors',
 
     -- cmp plugins
-    'hrsh7th/nvim-cmp', -- completion plugins
-    'hrsh7th/cmp-buffer', -- buffer completion (words from the current buffer)
-    'hrsh7th/cmp-path', -- path completion (files/filenames)
-    'hrsh7th/cmp-nvim-lua', -- has special nvim knowledge
-    'hrsh7th/cmp-nvim-lsp', -- things like autoimport and snippets
+    'hrsh7th/nvim-cmp',         -- completion plugins
+    'hrsh7th/cmp-buffer',       -- buffer completion (words from the current buffer)
+    'hrsh7th/cmp-path',         -- path completion (files/filenames)
+    'hrsh7th/cmp-nvim-lua',     -- has special nvim knowledge
+    'hrsh7th/cmp-nvim-lsp',     -- things like autoimport and snippets
     'saadparwaiz1/cmp_luasnip', -- cmp specifically to help with LuaSnip
 
     -- snippets
@@ -68,8 +69,8 @@ local plugins = {
     -- use 'rafamadriz/friendly-snippets' -- lots of snippets
 
     -- LSP things
-    'neovim/nvim-lspconfig', -- enables the LSP
-    'williamboman/mason.nvim', -- lsp installer
+    'neovim/nvim-lspconfig',        -- enables the LSP
+    'williamboman/mason.nvim',      -- lsp installer
     'williamboman/mason-lspconfig', -- lsp installer
 
     -- for nested context when coding
