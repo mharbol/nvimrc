@@ -58,4 +58,6 @@ return {
             },
         }
     end,
+    ignore_install = {},
+    modules = {},
 }

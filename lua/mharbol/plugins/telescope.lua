@@ -11,6 +11,8 @@ return {
     dependencies = { { 'nvim-lua/plenary.nvim' } },
     config = function()
         local builtin = require('telescope.builtin')
+        local telescope = require('telescope')
+        local actions = require('telescope.actions')
 
         --  Find "Project Files" defautlts to git files if this is a git repo
         vim.keymap.set('n', '<leader>pf',
@@ -31,5 +33,16 @@ return {
 
         -- "Project Search"
         vim.keymap.set('n', '<leader>ps', builtin.live_grep, { desc = "[P]roject [S]earch" }) -- `cargo install ripgrep` to get this one working
+
+        telescope.setup({
+            defaults = {
+                mappings = {
+                    i = {
+                        ["<C-k>"] = actions.move_selection_previous,
+                        ["<C-j>"] = actions.move_selection_next,
+                    },
+                },
+            },
+        })
     end,
 }
