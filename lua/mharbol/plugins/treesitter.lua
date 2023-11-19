@@ -26,6 +26,7 @@ return {
                 'lua',
                 'markdown',
                 'rust',
+                'sql',
                 'toml',
                 'typescript',
                 'vue',
@@ -56,8 +57,8 @@ return {
                 -- Instead of true it can also be a list of languages
                 additional_vim_regex_highlighting = false,
             },
+            ignore_install = {},
+            modules = {},
         }
     end,
-    ignore_install = {},
-    modules = {},
 }
