@@ -1,5 +1,7 @@
 # My [neovim](https://neovim.io) Configuration
 ## Prereqs
+Most things work well enough on their own; if not here are a few additions.
+
 [Java LSP tools](https://download.eclipse.org/jdtls/snapshots/?d). Requres Java 17 or later.
 
 For the best fitting font, run the following command and install to your shell/terminal:
