@@ -17,7 +17,7 @@ return {
         --  Find "Project Files" defautlts to git files if this is a git repo
         vim.keymap.set('n', '<leader>pf',
             function()
-                if is_git_repo then
+                if is_git_repo() then
                     builtin.git_files()
                 else
                     builtin.find_files()

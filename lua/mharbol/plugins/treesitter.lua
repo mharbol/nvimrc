@@ -1,13 +1,11 @@
 return {
     'nvim-treesitter/nvim-treesitter',
+    -- commit = '572a15f', -- here for astro
+    build = ':TSUpdate',
     config = function()
         local treesitter = require 'nvim-treesitter.configs'
 
         treesitter.setup {
-
-            -- commit = '572a15f', -- here for astro
-
-            build = ':TSUpdate',
 
             -- these are all the languages I want installed automatically
             -- A list of parser names, or "all"
