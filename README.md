@@ -12,6 +12,8 @@ LSP clients and other functionalities:
 ```bash
 # gopls
 go install -v golang.org/x/tools/gopls@latest
+# python virtual environment
+sudo apt install --yes -- python3-venv
 # Typescript Language Server
 npm install -g typescript typescript-language-server
 # Astro JS Build Tool
