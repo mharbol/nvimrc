@@ -23,6 +23,3 @@ npm install -g @astrojs/language-server
 # ripgrep (rg)
 cargo install ripgrep
 ```
-
-## Here is my cheesy demo:
-https://github.com/mharbol/nvimrc/assets/27396316/7c423e66-a9d4-4411-a045-d3f564026231
