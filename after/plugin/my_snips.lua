@@ -38,3 +38,8 @@ ls.add_snippets("java", {
     ls.parser.parse_snippet("str", "String ${1:str} = \"$0\";"),                          -- make a string
     ls.parser.parse_snippet("alist", "List<${1:type}> ${2:name} = new ArrayList<>();"),   -- make an ArrayList
 })
+
+ls.add_snippets("go", {
+    ls.parser.parse_snippet("rloop", "for _, ${1:item} := range ${2:iterable} {\n\t$0\n}"),           -- "range loop"
+    ls.parser.parse_snippet("riloop", "for ${1:index}, ${2:item} := range ${3:iterable} {\n\t$0\n}"), -- "range index loop"
+})
