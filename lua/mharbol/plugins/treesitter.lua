@@ -1,6 +1,6 @@
 return {
     'nvim-treesitter/nvim-treesitter',
-    -- commit = '572a15f', -- here for astro
+    -- commit = '000f718', -- here for astro
     build = ':TSUpdate',
     config = function()
         local treesitter = require 'nvim-treesitter.configs'
