@@ -15,7 +15,6 @@ return {
                 'cpp',
                 'dart',
                 'go',
-                'haskell',
                 'html',
                 'java',
                 'javascript',

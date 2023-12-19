@@ -162,11 +162,5 @@ return {
             capabilities = capabilities,
             on_attach = on_attach,
         })
-
-        lsp.hls.setup({
-            capabilities = capabilities,
-            on_attach = on_attach,
-            -- cmd = {"haskell-language-server-8.10.7", "--lsp"}
-        })
     end,
 }
