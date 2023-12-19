@@ -22,7 +22,6 @@ return {
                 'jdtls',
                 'gradle_ls',
                 'rust_analyzer',
-                'hls',
             },
         })
         local lsp = require('lspconfig')
