@@ -34,6 +34,9 @@ return {
         -- "Project Search"
         vim.keymap.set('n', '<leader>ps', builtin.live_grep, { desc = "[P]roject [S]earch" }) -- `cargo install ripgrep` to get this one working
 
+        -- "Git Branches"
+        vim.keymap.set('n', '<leader>gg', builtin.git_branches, { desc = "[G]it [B]ranches" })
+
         telescope.setup({
             defaults = {
                 mappings = {
