@@ -22,6 +22,7 @@ return {
                 'jdtls',
                 'gradle_ls',
                 'rust_analyzer',
+                'vls',
             },
         })
         local lsp = require('lspconfig')
@@ -158,6 +159,11 @@ return {
         })
 
         lsp.rust_analyzer.setup({
+            capabilities = capabilities,
+            on_attach = on_attach,
+        })
+
+        lsp.vls.setup({
             capabilities = capabilities,
             on_attach = on_attach,
         })
