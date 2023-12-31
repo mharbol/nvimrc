@@ -56,6 +56,9 @@ return {
             },
             ignore_install = {},
             modules = {},
+            indent = {
+                enable = true,
+            },
         }
     end,
 }
