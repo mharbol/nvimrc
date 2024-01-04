@@ -29,3 +29,6 @@ vim.keymap.set("n", "<C-Down>", "<C-w>j")
 
 -- go to start as easily as end
 vim.keymap.set("n", "9", "$")
+
+-- open terminal
+vim.keymap.set("n", "<C-m>", ":terminal<CR>")
