@@ -8,7 +8,13 @@ return {
                 color = "#5d87bf",
                 cterm_color = "67",
                 name = "Vlang",
-            }
+            },
+            ["toml"] = {
+                icon = "T",
+                color = "#ffffff",
+                cterm_color = "231",
+                name = "Toml",
+            },
         })
     end
 }
