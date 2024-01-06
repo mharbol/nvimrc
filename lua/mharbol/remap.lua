@@ -13,10 +13,6 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz") --center the cursor as we half-page scro
 vim.keymap.set("n", "<C-j>", "jzz")
 vim.keymap.set("n", "<C-k>", "kzz")
 
--- right/left navigation in insert mode
-vim.keymap.set("i", "<C-h>", "<Left>")
-vim.keymap.set("i", "<C-l>", "<Right>")
-
 -- I love being centered, so do that when I go
 -- to the bottom
 vim.keymap.set("n", "G", "Gzz")
@@ -29,6 +25,3 @@ vim.keymap.set("n", "<C-Down>", "<C-w>j")
 
 -- go to start as easily as end
 vim.keymap.set("n", "9", "$")
-
--- open terminal
-vim.keymap.set("n", "<C-m>", ":terminal<CR>")

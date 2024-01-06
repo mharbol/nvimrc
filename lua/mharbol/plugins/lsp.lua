@@ -1,9 +1,9 @@
-
 return {
     'neovim/nvim-lspconfig',
     dependencies = {
         'williamboman/mason.nvim',      -- lsp installer
         'williamboman/mason-lspconfig', -- lsp installer
+        'SmiteshP/nvim-navic',          -- ensure navic is up and running
     },
     config = function()
         local util = require("lspconfig/util")
@@ -25,6 +25,7 @@ return {
                 'vls',
             },
         })
+
         local lsp = require('lspconfig')
 
         -- for "capabilities" I guess
@@ -32,12 +33,12 @@ return {
 
         -- mappings set for the lsp attached
         local on_attach = function(client, bufnr)
-            local opts = {noremap = true, silent = true} -- these are just here for standard remapping options
+            local opts = { noremap = true, silent = true } -- these are just here for standard remapping options
 
             vim.keymap.set('n', 'gd', function() vim.lsp.buf.definition() end, opts)
             vim.keymap.set('n', 'gi', function() vim.lsp.buf.implementation() end, opts)
             vim.keymap.set('n', 'gt', function() vim.lsp.buf.type_definition() end, opts)
-            vim.keymap.set('n', 'K',  function() vim.lsp.buf.hover() end, opts)
+            vim.keymap.set('n', 'K', function() vim.lsp.buf.hover() end, opts)
             vim.keymap.set('n', '<leader>b', function() vim.lsp.buf.references() end, opts)
             vim.keymap.set('n', '<leader>vrn', function() vim.lsp.buf.rename() end, opts)
             vim.keymap.set('i', '<C-h>', function() vim.lsp.buf.signature_help() end, opts)
@@ -69,7 +70,7 @@ return {
                     },
                     diagnostics = {
                         -- Get the language server to recognize the `vim` global
-                        globals = {'vim'},
+                        globals = { 'vim' },
                     },
                     workspace = {
                         -- Make the server aware of Neovim runtime files
@@ -91,7 +92,7 @@ return {
         })
 
         -- python LSPing
-        lsp.pylsp.setup{
+        lsp.pylsp.setup {
             capabilities = capabilities,
             on_attach = on_attach,
             settings = {
@@ -113,29 +114,29 @@ return {
         lsp.clangd.setup({
             capabilities = capabilities,
             on_attach = on_attach,
-            cmd = {"clangd"},
-            filetypes = {"c", "cpp", "objc", "objcpp", "cuda", "proto"},
+            cmd = { "clangd" },
+            filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "proto" },
             root_dir = util.root_pattern(
-            '.clangd',
-            '.clang-tidy',
-            '.clang-format',
-            'compile_commands.json',
-            'compile_flags.txt',
-            'configure.ac',
-            '.git'
+                '.clangd',
+                '.clang-tidy',
+                '.clang-format',
+                'compile_commands.json',
+                'compile_flags.txt',
+                'configure.ac',
+                '.git'
             ),
             single_file_support = true,
         })
 
-        lsp.astro.setup{
+        lsp.astro.setup {
             capabilities = capabilities,
             on_attach = on_attach,
         }
 
-        lsp.tsserver.setup{
+        lsp.tsserver.setup {
             capabilities = capabilities,
             on_attach = on_attach,
-            cmd = {"typescript-language-server", "--stdio"},
+            cmd = { "typescript-language-server", "--stdio" },
             filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx" },
             init_options = {
                 hostInfo = "neovim"

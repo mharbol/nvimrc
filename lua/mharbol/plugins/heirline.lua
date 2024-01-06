@@ -1,5 +1,8 @@
 return {
     'rebelot/heirline.nvim',
+    dependencies = {
+        'SmiteshP/nvim-navic',
+    },
     config = function()
         local heirline = require("heirline")
         local utils = require("heirline.utils")
@@ -61,7 +64,7 @@ return {
             init = function(self)
                 self.status_dict = vim.b.gitsigns_status_dict
                 self.has_changes = self.status_dict.added ~= 0 or self.status_dict.removed ~= 0 or
-                self.status_dict.changed ~= 0
+                    self.status_dict.changed ~= 0
             end,
             hl = { fg = 'orange' },
 
@@ -194,8 +197,7 @@ return {
 
         -- aaaaaand... finally get to set them
         heirline.setup({
-            statusline = { space, git_info, file_info, align,
-                diagnosic_info, space, lsp_active, space, scroll_bar_info, space },
+            statusline = { space, git_info, file_info, align, diagnosic_info, space, lsp_active, space, scroll_bar_info, space },
             winbar = { wibar_spacer, navic_info },
         })
     end
