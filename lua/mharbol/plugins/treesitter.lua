@@ -21,6 +21,7 @@ return {
                 'latex',
                 'lua',
                 'markdown',
+                'python',
                 'rust',
                 'sql',
                 'toml',
