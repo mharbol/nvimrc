@@ -23,5 +23,3 @@ vim.opt.cursorline = true
 
 -- global statusline
 vim.opt.laststatus = 3
-
-vim.cmd([[au BufNewFile,BufRead *.v set filetype=vlang]])

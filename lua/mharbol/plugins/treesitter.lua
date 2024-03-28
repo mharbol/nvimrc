@@ -26,7 +26,6 @@ return {
                 'sql',
                 'toml',
                 'typescript',
-                'v',
                 'vue',
                 'yaml',
             },
