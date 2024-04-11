@@ -18,7 +18,7 @@ return {
                 'html',
                 'java',
                 'javascript',
-                'latex',
+                -- 'latex',
                 'lua',
                 'markdown',
                 'python',
