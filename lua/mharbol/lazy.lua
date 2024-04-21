@@ -19,4 +19,9 @@ require("lazy").setup({
     change_detection = {
         notify = false,
     },
+    ui = {
+        icons = {
+            not_loaded = ""
+        },
+    },
 })
