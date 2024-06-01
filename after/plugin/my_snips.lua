@@ -42,5 +42,9 @@ ls.add_snippets("java", {
 ls.add_snippets("go", {
     ls.parser.parse_snippet("rloop", "for _, ${1:item} := range ${2:iterable} {\n\t$0\n}"),           -- "range loop"
     ls.parser.parse_snippet("riloop", "for ${1:index}, ${2:item} := range ${3:iterable} {\n\t$0\n}"), -- "range index loop"
-    ls.parser.parse_snippet("tstr", "type ${1:name} struct {\n\t$0\n}"),                                    -- make a new struct type
+    ls.parser.parse_snippet("tstr", "type ${1:name} struct {\n\t$0\n}"),                              -- make a new struct type
+})
+
+ls.add_snippets("astro", {
+    ls.parser.parse_snippet("slot", "<slot />"), -- add a slot
 })
