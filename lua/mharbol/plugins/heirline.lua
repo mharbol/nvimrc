@@ -3,7 +3,6 @@ return {
     dependencies = {
         'SmiteshP/nvim-navic',
     },
-    commit = 'd48b334963f35970672487849d2b5970cb251df9';
     config = function()
         local heirline = require("heirline")
         local utils = require("heirline.utils")
