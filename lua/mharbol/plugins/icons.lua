@@ -9,6 +9,11 @@ return {
                 cterm_color = "231",
                 name = "Toml",
             },
+            ["astro"] = {
+                icon = "󰑣",
+                color = "#e86a10",
+                name = "Astro",
+            },
         })
     end
 }
