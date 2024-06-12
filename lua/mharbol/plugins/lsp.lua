@@ -22,6 +22,7 @@ return {
                 'jdtls',
                 'gradle_ls',
                 'rust_analyzer',
+                'svelte',
             },
         })
 
@@ -162,6 +163,11 @@ return {
         })
 
         lsp.rust_analyzer.setup({
+            capabilities = capabilities,
+            on_attach = on_attach,
+        })
+
+        lsp.svelte.setup({
             capabilities = capabilities,
             on_attach = on_attach,
         })
