@@ -23,6 +23,7 @@ return {
                 'gradle_ls',
                 'rust_analyzer',
                 'svelte',
+                'zls',
             },
         })
 
@@ -168,6 +169,11 @@ return {
         })
 
         lsp.svelte.setup({
+            capabilities = capabilities,
+            on_attach = on_attach,
+        })
+
+        lsp.zls.setup({
             capabilities = capabilities,
             on_attach = on_attach,
         })
