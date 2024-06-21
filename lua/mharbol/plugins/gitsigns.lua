@@ -1,5 +1,6 @@
 return {
     'lewis6991/gitsigns.nvim',
+    event = "BufEnter",
     opts = {
         on_attach = function(bufnr)
             -- typically opts is just empty
