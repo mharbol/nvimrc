@@ -48,3 +48,7 @@ ls.add_snippets("go", {
 ls.add_snippets("astro", {
     ls.parser.parse_snippet("slot", "<slot />"), -- add a slot
 })
+
+ls.add_snippets("zig", {
+    s('iim', fmt("const {} = @import(\"{}\");", { i(1, "module"), rep(1) })), -- name the import the same
+})
