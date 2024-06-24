@@ -55,7 +55,7 @@ return {
                 end
                 return " [" .. table.concat(names, " ") .. "]"
             end,
-            hl = { fg = "green", bold = true }
+            hl = { fg = "green", bold = true, bg = nil }
         }
 
         -- updates for git info
@@ -197,7 +197,19 @@ return {
 
         -- aaaaaand... finally get to set them
         heirline.setup({
-            statusline = { space, git_info, file_info, align, diagnosic_info, space, lsp_active, space, scroll_bar_info, space },
+            statusline = {
+                git_info,
+                space,
+                file_info,
+                align,
+                diagnosic_info,
+                space,
+                lsp_active,
+                space,
+                scroll_bar_info,
+                space,
+                hl = { bg = "#16161d" }
+            },
             winbar = { wibar_spacer, navic_info },
         })
     end
