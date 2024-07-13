@@ -37,7 +37,7 @@ return {
             local opts = { noremap = true, silent = true } -- these are just here for standard remapping options
 
             vim.keymap.set('n', 'gd', function() vim.lsp.buf.definition() end, opts)
-            vim.keymap.set('n', 'gi', function() vim.lsp.buf.implementation() end, opts)
+            vim.keymap.set('n', 'gf', function() vim.lsp.buf.implementation() end, opts)
             vim.keymap.set('n', 'gt', function() vim.lsp.buf.type_definition() end, opts)
             vim.keymap.set('n', 'K', function() vim.lsp.buf.hover() end, opts)
             vim.keymap.set('n', '[d', function() vim.diagnostic.goto_next() end, opts)
