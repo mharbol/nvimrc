@@ -17,7 +17,8 @@ return {
             vim.keymap.set('n', '<leader>gB', function() gs.blame_line({ full = false }) end, opts) -- git blame on the line
 
             -- hunk navigation
-            vim.keymap.set('n', '<leader>h', function() gs.next_hunk() end, opts) -- go to next hunk
+            vim.keymap.set('n', '<leader>j', function() gs.next_hunk() end, opts) -- go to next hunk
+            vim.keymap.set('n', '<leader>k', function() gs.prev_hunk() end, opts) -- go to next hunk
 
             -- toggling show_deleted
             vim.keymap.set('n', '<leader>gD', function() gs.toggle_deleted() end, opts)
