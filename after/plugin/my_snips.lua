@@ -34,9 +34,10 @@ ls.add_snippets("python", {
 })
 
 ls.add_snippets("java", {
-    ls.parser.parse_snippet("main", "public static void main(String[] args) {\n\t$0\n}"),         -- main method
-    ls.parser.parse_snippet("alist", "List<${1:type}> ${2:name} = new ArrayList<>();"),           -- make an ArrayList
-    ls.parser.parse_snippet("test", "@Test\npublic void ${1:testName}($2) {\n\t$0\n}"), -- new unit test
+    ls.parser.parse_snippet("main", "public static void main(String[] args) {\n\t$0\n}"),                      -- main method
+    ls.parser.parse_snippet("alist", "List<${1:type}> ${2:name} = new ArrayList<>();"),                        -- make an ArrayList
+    ls.parser.parse_snippet("ttest", "@Test\npublic void ${1:testName}($2) {\n\t$0\n}"),                       -- new unit test
+    ls.parser.parse_snippet("etest", "@Test\npublic void ${1:testName}($2) throws ${3:Exception} {\n\t$0\n}"), -- new unit test with Exception
 })
 
 ls.add_snippets("go", {
