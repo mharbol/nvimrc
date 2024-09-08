@@ -136,7 +136,7 @@ return {
             on_attach = on_attach,
         }
 
-        lsp.tsserver.setup {
+        lsp.ts_ls.setup {
             capabilities = capabilities,
             on_attach = on_attach,
             cmd = { "typescript-language-server", "--stdio" },
