@@ -24,6 +24,7 @@ return {
                 'rust_analyzer',
                 'svelte',
                 'zls',
+                'cmake',
             },
         })
 
@@ -174,6 +175,11 @@ return {
         })
 
         lsp.zls.setup({
+            capabilities = capabilities,
+            on_attach = on_attach,
+        })
+
+        lsp.cmake.setup({
             capabilities = capabilities,
             on_attach = on_attach,
         })
