@@ -41,8 +41,15 @@ return {
             vim.keymap.set('n', 'gf', function() vim.lsp.buf.implementation() end, opts)
             vim.keymap.set('n', 'gt', function() vim.lsp.buf.type_definition() end, opts)
             vim.keymap.set('n', 'K', function() vim.lsp.buf.hover() end, opts)
-            vim.keymap.set('n', '[d', function() vim.diagnostic.jump({count = -1, float = true}) end, opts)
-            vim.keymap.set('n', ']d', function() vim.diagnostic.jump({count = 1, float = true}) end, opts)
+
+            -- TODO clean up when release goes to >=0.11.x
+            if vim.version().minor < 11 then
+                vim.keymap.set('n', '[d', function() vim.diagnostic.goto_prev() end, opts)
+                vim.keymap.set('n', ']d', function() vim.diagnostic.goto_next() end, opts)
+            else
+                vim.keymap.set('n', '[d', function() vim.diagnostic.jump({ count = -1, float = true }) end, opts)
+                vim.keymap.set('n', ']d', function() vim.diagnostic.jump({ count = 1, float = true }) end, opts)
+            end
             vim.keymap.set('n', '<leader>b', function() vim.lsp.buf.references() end, opts)
             vim.keymap.set('n', '<leader>vrn', function() vim.lsp.buf.rename() end, opts)
             vim.keymap.set('i', '<C-h>', function() vim.lsp.buf.signature_help() end, opts)
