@@ -21,5 +21,9 @@ vim.opt.smartcase = true
 -- call appearance things
 vim.opt.cursorline = true
 
+-- sensible split directions
+vim.o.splitright = true
+vim.o.splitbelow = true
+
 -- global statusline
 vim.opt.laststatus = 3
