@@ -50,6 +50,10 @@ ls.add_snippets("astro", {
     ls.parser.parse_snippet("slot", "<slot />"), -- add a slot
 })
 
+ls.add_snippets("cpp", {
+    ls.parser.parse_snippet("do", "do {\n\t${0:// statements...}\n} while (${1:/* condition */});"), -- do/while loop
+})
+
 ls.add_snippets("zig", {
     s('iim', fmt("const {} = @import(\"{}\");", { i(1, "module"), rep(1) })), -- name the import the same
 })
