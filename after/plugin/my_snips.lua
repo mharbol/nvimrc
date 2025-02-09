@@ -52,6 +52,7 @@ ls.add_snippets("astro", {
 
 ls.add_snippets("cpp", {
     ls.parser.parse_snippet("do", "do {\n\t${0:// statements...}\n} while (${1:/* condition */});"), -- do/while loop
+    ls.parser.parse_snippet("vstr", "std::vector<std::string> ${0:name}"),                           -- vector of string
 })
 
 ls.add_snippets("zig", {
