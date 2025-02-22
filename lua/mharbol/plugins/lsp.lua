@@ -41,6 +41,8 @@ return {
             vim.keymap.set('n', 'gf', function() vim.lsp.buf.implementation() end, opts)
             vim.keymap.set('n', 'gt', function() vim.lsp.buf.type_definition() end, opts)
             vim.keymap.set('n', 'K', function() vim.lsp.buf.hover() end, opts)
+            vim.keymap.set('n', '<leader><leader>h',
+                function() vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled()) end, opts)
 
             -- TODO clean up when release goes to >=0.11.x
             if vim.version().minor < 11 then

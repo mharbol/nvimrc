@@ -58,3 +58,7 @@ ls.add_snippets("cpp", {
 ls.add_snippets("zig", {
     s('iim', fmt("const {} = @import(\"{}\");", { i(1, "module"), rep(1) })), -- name the import the same
 })
+
+ls.add_snippets("rust", {
+    ls.parser.parse_snippet("fnr", "fn ${2:name}(${3}) -> ${1:return_type} {\n\t${0:// func}\n}"), -- fn with return
+})
