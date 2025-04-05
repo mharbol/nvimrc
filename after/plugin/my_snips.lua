@@ -61,4 +61,6 @@ ls.add_snippets("zig", {
 
 ls.add_snippets("rust", {
     ls.parser.parse_snippet("fnr", "fn ${2:name}(${3}) -> ${1:return_type} {\n\t${0:// func}\n}"), -- fn with return
+    ls.parser.parse_snippet("tfn", "fn ${1:name}(${2});"),                                         -- fn in trait
+    ls.parser.parse_snippet("tfnr", "fn ${2:name}(${3}) -> ${1:return_type};"),                    -- fn in trait with return
 })

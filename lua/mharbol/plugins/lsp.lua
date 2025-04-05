@@ -17,6 +17,7 @@ return {
                 'gopls', -- install gopls with go command "go install -v golang.org/x/tools/gopls@latest"
                 'pylsp',
                 'clangd',
+                'cssls',
                 'astro', -- install language server with 'npm install -g @astrojs/language-server'
                 'lua_ls',
                 'jdtls',
@@ -189,6 +190,11 @@ return {
         })
 
         lsp.cmake.setup({
+            capabilities = capabilities,
+            on_attach = on_attach,
+        })
+
+        lsp.cssls.setup({
             capabilities = capabilities,
             on_attach = on_attach,
         })
