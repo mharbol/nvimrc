@@ -26,6 +26,5 @@ return {
 
         -- how the gutter looks with git
         signs = {}, -- currently with the default
-        show_deleted = false,
     }
 }
