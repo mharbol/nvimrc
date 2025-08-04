@@ -16,7 +16,6 @@ return {
                 'astro', -- install language server with 'npm install -g @astrojs/language-server'
                 'cssls',
                 'clangd',
-                'cmake',
                 "gopls", -- install gopls with go command "go install -v golang.org/x/tools/gopls@latest"
                 'jdtls',
                 'lua_ls',
