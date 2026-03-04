@@ -42,6 +42,7 @@ return {
                 vim.keymap.set('n', 'gf', function() vim.lsp.buf.implementation() end, opts)
                 vim.keymap.set('n', 'gt', function() vim.lsp.buf.type_definition() end, opts)
                 vim.keymap.set('n', 'K', function() vim.lsp.buf.hover() end, opts)
+                vim.keymap.set('n', '<leader><leader>a', function() vim.lsp.buf.code_action() end, opts)
                 vim.keymap.set('n', '<leader><leader>h',
                     function() vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled()) end, opts)
 
