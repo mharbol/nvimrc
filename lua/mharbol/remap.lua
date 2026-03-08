@@ -1,7 +1,7 @@
 
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
--- Remaps for moving blocks up and down in normal and visual modes
+-- Remaps for moving blocks up and down in visual mode
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
