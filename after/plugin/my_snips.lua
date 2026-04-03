@@ -9,7 +9,6 @@ local rep = require('luasnip.extras').rep     -- repeat what is in position
 
 -- table that holds common snippets for all languages
 ls.add_snippets("all", {
-    s("curtime", f(function() return os.date("%D - %H:%M") end)), -- an example function node
 })
 
 ls.add_snippets("lua", {
@@ -59,8 +58,24 @@ ls.add_snippets("zig", {
     s('iim', fmt("const {} = @import(\"{}\");", { i(1, "module"), rep(1) })), -- name the import the same
 })
 
+ls.add_snippets("xml", {
+    ls.parser.parse_snippet("</>", "<${0:tag} />"),
+    s("<>", {
+        t("<"), i(1, "tag"), t(">"), i(0),
+        t("</"), rep(1), t(">"),
+    }),
+})
+
 ls.add_snippets("rust", {
     ls.parser.parse_snippet("fnr", "fn ${2:name}(${3}) -> ${1:return_type} {\n\t${0:// func}\n}"), -- fn with return
     ls.parser.parse_snippet("tfn", "fn ${1:name}(${2});"),                                         -- fn in trait
     ls.parser.parse_snippet("tfnr", "fn ${2:name}(${3}) -> ${1:return_type};"),                    -- fn in trait with return
+})
+
+ls.add_snippets("tex", {
+    s("beg", {
+        t("\\begin{"), i(1), t("}"),
+        t({ "", "\t" }), i(0),
+        t({ "", "\\end{" }), rep(1), t("}"),
+    })
 })

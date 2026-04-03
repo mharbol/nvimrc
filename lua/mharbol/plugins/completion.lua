@@ -58,8 +58,7 @@ return {
             history = true,
 
             -- here to update as you type
-            updateevents = "TextChanged",
-            "TextChangedI",
+            updateevents = { "TextChanged", "TextChangedI" },
 
             -- AutoSnippets
             enable_autosnippets = true,
