@@ -22,6 +22,7 @@ return {
                 'pylsp',
                 "rust_analyzer",
                 'svelte',
+                'ts_ls',
                 'zls',
             },
         })
