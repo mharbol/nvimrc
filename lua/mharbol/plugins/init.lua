@@ -2,4 +2,5 @@
 
 return {
     -- 'nvim-treesitter/playground',
+    "pjhamera/national-parks-themes", -- just for fun
 }
