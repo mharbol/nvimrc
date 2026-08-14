@@ -8,6 +8,7 @@ return {
     },
     ft = { "scala", "sbt" },
     opts = function()
+        local telescope_builtin = require('telescope.builtin')
         local metals_config = require("metals").bare_config()
         metals_config.on_attach = function(client, bufnr)
             -- your on_attach function
